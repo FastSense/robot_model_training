@@ -1,0 +1,27 @@
+train_data_path: /home/kostya_fs/code/rosbot_gazebo_datasets/train/
+val_data_path: /home/kostya_fs/code/rosbot_gazebo_datasets/validation/
+test_data_path: /home/kostya_fs/code/rosbot_gazebo_datasets/test/
+exclude_train_data: other_trajectories
+exclude_val_data: ''
+exclude_test_data: ''
+
+project_name: mlcontrol
+entity: kostya_fs
+
+model_type: linear
+
+batch_size: 10000
+
+main_metric: traj_ate
+layers_num: 3                  # [0:5]  ## HIDDEN
+hidden_size: 64                # [32,64,128]
+activation_function: relu      # (relu or elu) 
+
+num_epochs: 25
+rollout_size: 150             # used in predict_multi_step
+learning_rate: 0.01           # [0.001:0.0001]
+
+plot_trajectories: True
+save_to_csv: True
+
+

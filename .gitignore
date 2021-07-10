@@ -1,0 +1,13 @@
+*.ipynb_checkpoints
+saved_models
+*.pyc
+wandb
+*.mp4
+*.avi
+*.bin
+__pycache__
+.vscode
+*.tar
+*.pth
+runs
+*.onnx
