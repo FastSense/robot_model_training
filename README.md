@@ -1,36 +1,41 @@
 # Dynamic model training
-# 1. Назначение
+
 Для решения задачи оптимального управления роботом, требуется точная динамическая модель, но получить ее аналитическими способами не всегда возможно. В данном репозитории представлен инструмент для получения динамической модели робота, нейросетевыми методами. Нейросеть предсказывает следующее состояние робота через заданную временную дельту, на основании текущего состояния и управляющего воздействия.
 
-# 2. Установка
+## Overview
+
+В репозитории созданы следующие инструменты:
+1. [Классы и утилиты для обучения модели, реализущие функции ошибок, метрики..](/lib/README.md)
+2. [Пример обучения модели дифференциального робота](/examples/README.md) 
+  * Описание класса датасета и как собирать данные для обучения
+  * Описание класса модели робота
+  * Запуск обучения и анализ результатов
+2. Скрипт для экспорта модели из Pytorch в ONNX
+
+
 ### 2.1 Минимальные системные требования
 * 4 ядра процессора
 * 8 ГБ ОЗУ
-* Для обучения на GPU видеокарта nvidia (например Nvidia GTX 1060 ti) и установить [Cuda](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#ubuntu-installation)
-  
-### 2.2 Склонировать репозиторий
-```bash
-git clone https://github.com/FastSense/ML-Training
-git checkout rosbot-gazebo-model
-```
-### 2.3 Установить необходимые модули python3
-```bash
-sudo apt install python3-pip
-pip3 install torch
-pip3 install numpy
-pip3 install pandas
-pip3 install matplotlib
-pip3 install seaborn
-pip3 install tqdm
-pip3 install yaml-1.3
-pip3 install onnxruntime
-pip3 install wandb
-pip3 install nnio
-```
-```
-cd mppi_train
-pip3 install .
-```
+* Видеокарта nvidia (например Nvidia GTX 1060 ti)
+
+## Quick start
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### 2.4 (Опционально) Зарегистрироваться в [wandb](https://wandb.ai/) 
 ### 2.5 (Опционально) [PyTorch: A 60 Minute Blitz](https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html)
 ### 2.6 (Опционально) Запустить обучение динамической модели [rosbot](https://github.com/FastSense/ML-Training/tree/rosbot-gazebo-model/rosbot-gazebo-model/examples/gz-rosbot)

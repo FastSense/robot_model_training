@@ -23,8 +23,16 @@ RUN apt-get install -y python3.8 \
     python3.8-dev \
     python3.8-distutils
 
+# Utils 
+RUN apt-get install -y \
+        tmux \
+        ranger \
+        wget \
+        neovim && \
+        rm -rf /var/lib/apt/lists/*    
+
 # Create a non-root user and switch to it
-RUN adduser --disabled-password --gecos '' --shell /bin/bash user \
+RUN adduser --disabled-password --gecos '' --shell /bin/zsh user \
  && chown -R user:user /app
 RUN echo "user ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/90-user
 USER user
@@ -49,6 +57,19 @@ RUN pip install matplotlib \
 
 # Torch
 RUN pip install torch==1.6.0
+
+
+
+# Scripts
+RUN mkdir -p /home/user/scripts
+WORKDIR /home/user/scripts
+
+COPY scripts/utils-setup.sh .
+RUN ./utils-setup.sh        
+
+WORKDIR /home/user
+RUN rm -rf scripts
+
 
 EXPOSE 8888
 
