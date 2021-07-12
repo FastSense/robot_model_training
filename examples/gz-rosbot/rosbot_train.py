@@ -14,8 +14,8 @@ import numpy as np
 
 from rosbot_model import RosbotModel
 from rosbot_dataset import RosbotDataset
-from mppi_train.trainer import Trainer
-from mppi_train.utils import parse_config, init_wandb
+from robot_nn.trainer import Trainer
+from robot_nn.utils import parse_config, init_wandb
 """
 launch example:
 
