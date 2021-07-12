@@ -5,6 +5,9 @@
  Пример запуска обучения динамической модели rosbot
 
 ### 2 Скачать [данные](https://drive.google.com/file/d/1zbWuxToTtiBUcXPGtaFSP3kP6n6Lcoep/view)
+Формат хранения данных, представлен на рисунке ниже
+![angular_example](/images/datasets.jpg)
+
 ### 2.1 (Опционально) Зарегистрироваться в [wandb](https://wandb.ai/) 
 ### 2.2 (Опционально) [PyTorch: A 60 Minute Blitz](https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html)
 
