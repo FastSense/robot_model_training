@@ -5,8 +5,9 @@
 
 Схема взаимодействия класса с Trainer с классами RobotDataset и  RobotModel, предсавлена на рисунке
 
-![angular_example](/images/main_scheme.jpg)
+![main_scheme](/docs/images/main_scheme.jpg)
 
+Trainer взаимодействует с классом, представляющим модель робота ([RosbotModel](/docs/rosbot_model.md)) и наборами объектов класса датасета ([RosbotDataset](/docs/rosbot_dataset.md))
 
 ## Основные метода класса
 

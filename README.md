@@ -22,7 +22,7 @@
 ## Start Guide
 
 1. Собрать докер контейнер и убедиться, что Pytorch нормально запускается на GPU
-Открыть темринал ctrl + alt + t
+
 ```python3
 python3
 >>> import torch
