@@ -19,8 +19,8 @@ def get_version(rel_path):
 
 
 setup(
-    name='mppi_train',
-    version=get_version('mppi_train/__init__.py'),
+    name='robot_nn',
+    version=get_version('robot_nn/__init__.py'),
     description='A package for training a neural network dynamic model of a robot',
     long_description_content_type='text/markdown',
     author='Kostya Yamshanov',
@@ -32,7 +32,6 @@ setup(
         'numpy',
         'torch',
         'tqdm',
-        'wandb',
         'pandas',
     ]
 )

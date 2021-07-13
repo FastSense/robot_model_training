@@ -5,7 +5,7 @@ import torch
 import torch.nn as nn
 # default NN model
 import matplotlib.pyplot as plt
-from mppi_train.defualt_nn_model import DefaultModel
+from robot_nn.defualt_nn_model import DefaultModel
 import numpy as np
 
 class RosbotModelLoss(nn.Module):
