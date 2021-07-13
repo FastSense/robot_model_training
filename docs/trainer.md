@@ -7,6 +7,7 @@
 
 ![main_scheme](/docs/images/main_scheme.jpg)
 
+Trainer взаимодействует с классом, представляющим модель робота ([RosbotModel](/docs/rosbot_model.md)) и наборами объектов класса датасета ([RosbotDataset](/docs/rosbot_dataset.md))
 
 ## Основные метода класса
 
