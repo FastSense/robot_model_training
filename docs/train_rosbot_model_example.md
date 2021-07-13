@@ -8,7 +8,7 @@
 Данные собраны, с помощью логирующей ноды [logger](https://github.com/urock/rosbot/tree/develop/logger), для робота RosBot в робототехническом симуляторе Gazebo
 Формат хранения данных, представлен на рисунке ниже
 
-![datasets](/images/datasets.jpg)
+![datasets](/docs/images/datasets.jpg)
 
 ### 2.1 (Опционально) Зарегистрироваться в [wandb](https://wandb.ai/) 
 ### 2.2 (Опционально) [PyTorch: A 60 Minute Blitz](https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html)

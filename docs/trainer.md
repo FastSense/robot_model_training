@@ -5,7 +5,7 @@
 
 Схема взаимодействия класса с Trainer с классами RobotDataset и  RobotModel, предсавлена на рисунке
 
-![main_scheme](/images/main_scheme.jpg)
+![main_scheme](/docs/images/main_scheme.jpg)
 
 
 ## Основные метода класса
