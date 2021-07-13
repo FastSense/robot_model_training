@@ -1,63 +1,77 @@
-FROM nvidia/cuda:10.2-base-ubuntu18.04
+FROM nvidia/cuda:11.4.0-base-ubuntu20.04
 
-# Install some basic utilities
-RUN apt-get update && apt-get install -y \
-    curl \
-    ca-certificates \
-    sudo \
-    git \
-    bzip2 \
-    libx11-6 \
-    wget
-# && rm -rf /var/lib/apt/lists/*
 
-# Create a working directory
-RUN mkdir /app
-WORKDIR /app
-
-# Install Python3.8
-RUN apt-get install -y software-properties-common
-RUN add-apt-repository ppa:deadsnakes/ppa
-RUN apt-get update
-RUN apt-get install -y python3.8 \
-    python3.8-dev \
-    python3.8-distutils
-
-# Utils 
-RUN apt-get install -y \
+# >>>>>>>>>>>> Utils 
+RUN apt-get update && \
+    apt-get install -y \
+        curl \
+        ca-certificates \
+        sudo \
+        git \
+        bzip2 \
+        libx11-6 \
         tmux \
         ranger \
         wget \
-        neovim && \
-        rm -rf /var/lib/apt/lists/*    
+        neovim \
+        nano \
+        htop \
+        iputils-ping && \
+        rm -rf /var/lib/apt/lists/*
+# <<<<<<<<<<<< Utils
 
-# Create a non-root user and switch to it
-RUN adduser --disabled-password --gecos '' --shell /bin/zsh user \
- && chown -R user:user /app
-RUN echo "user ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/90-user
-USER user
+
+# >>>>>>>>>>>> Python packages
+ARG DEBIAN_FRONTEND=noninteractive
+ENV TZ=Europe/Moscow
+
+RUN apt-get update && \
+    apt-get install -y \
+       python3-tk \
+       python3-pip && \
+       rm -rf /var/lib/apt/lists/*
+
+RUN pip3 install --upgrade pip && \
+    pip3 install \
+       torch 
+
+RUN pip3 install --upgrade pip && \
+    pip3 install \
+        torch \
+        tensorboard \
+        pandas \
+        scipy \
+        jupyterlab \
+        sklearn \
+        opencv-python \
+        tqdm \
+        numpy \
+        pandas \
+        numba \
+        matplotlib \
+        wandb \
+        seaborn \
+        tqdm \
+        yaml \
+        nnio \
+        onnxruntime \
+        setuptools
+# <<<<<<<<<<<<< Python packages
+
+
+# >>>>>>>>>>>> Create User
+ENV ROSUSER="user"
+
+RUN adduser --home /home/${ROSUSER} --shell /bin/zsh --gecos '' --disabled-password ${ROSUSER} && \
+    usermod -a -G root,sudo,video ${ROSUSER} && \
+    echo "${ROSUSER} ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/${ROSUSER}
+user $ROSUSER
 
 # All users can use /home/user as their home directory
 ENV HOME=/home/user
 ENV PATH="/home/user/.local/bin:${PATH}"
 RUN chmod 777 /home/user
-
-# Install Pip
-RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-RUN python3.8 get-pip.py
-
-# Python packages
-RUN pip install matplotlib \
-    pandas \
-    scipy \
-    jupyterlab \
-    sklearn \
-    opencv-python \
-    tqdm
-
-# Torch
-RUN pip install torch==1.6.0
-
+# <<<<<<<<<<<< Create User
 
 
 # Scripts
