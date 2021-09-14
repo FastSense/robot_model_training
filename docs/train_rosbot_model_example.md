@@ -4,7 +4,7 @@
 
  Пример запуска обучения динамической модели rosbot
 
-### 2 Скачать [данные](https://drive.google.com/file/d/1zbWuxToTtiBUcXPGtaFSP3kP6n6Lcoep/view)
+### 2 Скачать [данные](https://drive.google.com/drive/folders/1Bbpwrpy7a2CGZfnPifSkvEu84e93Ypoj?usp=sharing)
 Данные собраны, с помощью логирующей ноды [logger](https://github.com/urock/rosbot/tree/develop/logger), для робота RosBot в робототехническом симуляторе Gazebo.Формат хранения данных, представлен на рисунке ниже
 
 ![datasets](/docs/images/datasets.jpg)
