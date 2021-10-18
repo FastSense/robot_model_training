@@ -30,5 +30,7 @@ python3
 >>> torch.cuda.is_available()
 ```
 
+Если *torch.cuda.is_available()* возвращает **False**, попробуйте установить nvidia-docker по [инструкции](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html) и обновить nvidia-driver.
+
 2. Запустить обучение модели на тестовых данных, собранных для робота Rosbot в симуляторе Gazebo 9 [инструкция](/docs/train_rosbot_model_example.md)
 3. Переопределить классы датасета и модели робота и создать скрипт обучения [инструкция](/docs/train_model.md)
