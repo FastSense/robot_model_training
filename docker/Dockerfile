@@ -52,7 +52,7 @@ RUN pip3 install --upgrade pip && \
         wandb \
         seaborn \
         tqdm \
-        yaml \
+        pyyaml \
         nnio \
         onnxruntime \
         setuptools
