@@ -1,4 +1,4 @@
-FROM nvidia/cuda:11.4.0-base-ubuntu20.04
+FROM nvidia/cuda:11.2.0-base-ubuntu20.04
 
 
 # >>>>>>>>>>>> Utils 
@@ -33,11 +33,10 @@ RUN apt-get update && \
 
 RUN pip3 install --upgrade pip && \
     pip3 install \
-       torch 
+       torch==1.9.0
 
 RUN pip3 install --upgrade pip && \
     pip3 install \
-        torch \
         tensorboard \
         pandas \
         scipy \
@@ -55,6 +54,7 @@ RUN pip3 install --upgrade pip && \
         pyyaml \
         nnio \
         onnxruntime \
+        wandb \
         setuptools
 # <<<<<<<<<<<<< Python packages
 

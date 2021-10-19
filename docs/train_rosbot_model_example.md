@@ -9,7 +9,7 @@
 
 ![datasets](/docs/images/datasets.jpg)
 
-### 2.1 (Опционально) Зарегистрироваться в [wandb](https://wandb.ai/) 
+### 2.1 (Опционально) Зарегистрироваться в [wandb](https://wandb.ai/) [Wandb with Pytorch](https://wandb.ai/quickstart/pytorch)
 ### 2.2 (Опционально) [PyTorch: A 60 Minute Blitz](https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html)
 
 ### 3 Изменить [конфиг](../examples/gz-rosbot/configs/gz-rosbot_1.yaml)
