@@ -16,6 +16,9 @@ RUN apt-get update && \
         neovim \
         nano \
         htop \
+        ffmpeg \
+        libsm6 \
+        libxext6 \
         iputils-ping && \
         rm -rf /var/lib/apt/lists/*
 # <<<<<<<<<<<< Utils
