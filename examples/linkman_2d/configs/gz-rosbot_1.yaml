@@ -18,8 +18,8 @@ hidden_size: 64                # [32,64,128]
 activation_function: relu      # (relu or elu) 
 
 num_epochs: 25
-rollout_size: 150             # used in predict_multi_step
-learning_rate: 0.01           # [0.001:0.0001]
+rollout_size: 25               # used in predict_multi_step
+learning_rate: 0.02           # [0.001:0.0001]
 
 plot_trajectories: True
 save_to_csv: True
