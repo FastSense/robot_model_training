@@ -1,6 +1,6 @@
-train_data_path: /home/kostya/work/metalbot/ros2_ws/src/utils/logger/linkman_sy/train/
-val_data_path: /home/kostya/work/metalbot/ros2_ws/src/utils/logger/linkman_sy/validation/
-test_data_path: /home/kostya/work/metalbot/ros2_ws/src/utils/logger/linkman_sy/test/
+train_data_path: /home/kostya_fs/code/linkman_2d_dataset/train/
+val_data_path: /home/kostya_fs/code/linkman_2d_dataset/validation/
+test_data_path: /home/kostya_fs/code/linkman_2d_dataset/test/
 exclude_train_data: ''
 exclude_val_data: ''
 exclude_test_data: ''
@@ -10,7 +10,7 @@ entity: kostya_fs
 
 model_type: semilinear
 
-batch_size: 10000
+batch_size: 1000
 
 main_metric: traj_ate
 layers_num: 3                  # [0:5]  ## HIDDEN
